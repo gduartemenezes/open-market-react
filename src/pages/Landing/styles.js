@@ -7,6 +7,35 @@ export const Container = styled.section`
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    img {
+      width: 150px;
+      margin-left: 20px;
+    }
+    a {
+      border: 2px solid transparent;
+      color: #fff;
+      font-size: 120%;
+      padding-bottom: 10px;
+      transition: border 0.2s;
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    div {
+      a {
+        margin-right: 50px;
+      }
+    }
+  }
+
   h1 {
     color: #fff;
     font-weight: 300;
@@ -41,13 +70,13 @@ export const ActionBox = styled.div`
   a:hover {
     filter: brightness(80%);
   }
-  a.btn-beers {
+  a.btn-login {
     color: #fff;
     background: transparent;
     border: 1px solid #55a44e;
     transition: color 1s, background 1s;
   }
-  a.btn-beers:hover {
+  a.btn-login:hover {
     color: #fff;
     background: #55a44e;
     border: 1px solid #fff;
