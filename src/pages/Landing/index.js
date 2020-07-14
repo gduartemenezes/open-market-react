@@ -6,14 +6,14 @@ export default function Main() {
   return (
     <Container>
       <h1>
-        Say goodbye to the same old beers.
+        Start eating healthy food today.
         <br />
-        It's time to discover.
+        It&apos;s time to discover.
       </h1>
       <ActionBox>
         <Link to="/register">Join Now</Link>
-        <Link to="/popular" className="btn-beers">
-          Popular Beers
+        <Link to="/signin" className="btn-beers">
+          Login
         </Link>
       </ActionBox>
     </Container>

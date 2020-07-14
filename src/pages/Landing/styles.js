@@ -21,33 +21,36 @@ export const Container = styled.section`
 
 export const ActionBox = styled.div`
   position: absolute;
-  top: 65%;
-  left: 50%;
+  top: 50%;
+  left: 70%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   a {
-    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 700;
     padding: 15px;
     margin-left: 30px;
-    background: #352f44;
-    border: 1px solid #352f44;
+    background: #55a44e;
+    border: 1px solid #55a44e;
     color: #fff;
     border-radius: 20px;
   }
   a:hover {
-    filter: brightness(65%);
+    filter: brightness(80%);
   }
   a.btn-beers {
     color: #fff;
     background: transparent;
-    border: 1px solid #352f44;
+    border: 1px solid #55a44e;
     transition: color 1s, background 1s;
   }
   a.btn-beers:hover {
     color: #fff;
-    background: #352f44;
-    border: 1px solid #352f44;
+    background: #55a44e;
+    border: 1px solid #fff;
   }
 `;
 
