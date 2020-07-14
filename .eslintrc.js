@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
   env: {
     browser: true,
     es2020: true,
@@ -9,6 +9,10 @@ module.exports = {
     'prettier',
     'prettier/react'
   ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -19,18 +23,19 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier',
+    'prettier'
   ],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
-        'warn',
-        {extensions: ['.jsx', '.js']}
+      'warn',
+      {extensions: ['.jsx', '.js']}
     ],
     'import/prefer-default-export': 'off',
-    'no-console': ['error', {allow: ['tron']}],
-    'no-param-reassign': 'off',
-    'react/jsx-props-no-spreading': 'off'
+    'no-console': ['error', {allow : ['tron']}],
+    'no-param-reassign' : 'off',
+    'react/ jsx-props-no-spreafing': 'off'
+
   },
   settings: {
     'import/resolver': {
