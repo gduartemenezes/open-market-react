@@ -12,6 +12,10 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  body {
+    background: #d5d5d5;
+  }
+
   body, input, button {
     font: 14px, 'Roboto', sans-serif;
   }
