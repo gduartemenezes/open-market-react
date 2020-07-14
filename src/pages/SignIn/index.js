@@ -13,7 +13,8 @@ function SignIn() {
         <h3>Log in</h3>
         <span>Start selling your goods right away</span>
         <Link to="/register">
-          I don&apos;t have an account <FiLogIn size={16} color="#FFF" />
+          <span>I don&apos;t have an account </span>
+          <FiLogIn size={20} color="#FFF" />
         </Link>
       </Info>
       <Form>

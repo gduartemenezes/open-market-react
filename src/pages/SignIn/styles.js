@@ -70,12 +70,17 @@ export const Info = styled.div`
   }
 
   a {
-    align-content: center;
+    display: flex;
+    align-items: center;
     border: 1px solid transparent;
-    margin: 35px 0 35px 150px;
-    color: #fff;
-    font-size: 120%;
+    margin: 35px 0 35px 135px;
     transition: border 0.3s;
+
+    span {
+      color: #fff;
+      font-size: 120%;
+      margin: 0 5px;
+    }
 
     &:hover {
       border-bottom: 1px solid #fff;
