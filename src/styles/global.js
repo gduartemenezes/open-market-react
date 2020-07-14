@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import backgroundImg from '~/assets/img/background.jpg';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
@@ -14,10 +15,11 @@ export default createGlobalStyle`
     outline: 0;
   }
 
-
-  body {
-        -webkit-font-smoothing: antialiased;
-    }
+  body{
+    background: url(${backgroundImg});
+    background-repeat: repeat;
+    -webkit-font-smoothing: antialiased !important;
+  }
 
 
   html, body, #root {
@@ -27,10 +29,6 @@ export default createGlobalStyle`
   body, input, button {
     font: 14px;
     font-family: 'Roboto', 'Arial', sans-serif;
-  }
-
-  body {
-    background: #d5d5d5;
   }
 
   a {
