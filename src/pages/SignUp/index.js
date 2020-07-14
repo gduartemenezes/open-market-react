@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
-function SignIn() {
+function SignUp() {
   return (
     <Container>
       <Info>
@@ -27,4 +27,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;
