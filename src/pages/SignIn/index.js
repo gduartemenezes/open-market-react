@@ -6,9 +6,8 @@ import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
 function SignIn() {
-
   function handleSubmit(data) {
-    console.log(data);
+    console.tron.log(data);
   }
 
   return (

@@ -7,7 +7,7 @@ import { Container, Info } from './styles';
 
 function SignUp() {
   function handleSubmit(data) {
-    console.log(data);
+    console.tron.log(data);
   }
 
   return (
