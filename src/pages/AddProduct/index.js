@@ -1,9 +1,17 @@
 import React from 'react';
+import * as Yup from 'yup';
+
 import { FiChevronLeft } from 'react-icons/fi';
 import { Form, Input } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
 import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
+
+const schema = Yup.object().shape({
+  name: Yup.string().required('This field is required'),
+  value: Yup.string().required('This field is required'),
+  quantity: Yup.string().required('This field is required'),
+});
 
 function AddProduct() {
   function handleSubmit(data) {
@@ -21,7 +29,7 @@ function AddProduct() {
           <span>Back to profile</span>
         </Link>
       </Info>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} schema={schema}>
         <Input type="text" name="name" placeholder="Name" />
         <Input type="text" name="value" placeholder="Value" />
         <Input type="text" name="quantity" placeholder="Quantity" />

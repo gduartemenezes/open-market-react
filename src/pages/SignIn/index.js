@@ -1,10 +1,21 @@
 import React from 'react';
+import * as Yup from 'yup';
+
 import { FiLogIn } from 'react-icons/fi';
 import { Form, Input } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
+
 import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
+const schema = Yup.object().shape({
+  email: Yup.string()
+    .email('Invalid e-mail')
+    .required('This field is required'),
+  password: Yup.string()
+    .required('This field is required')
+    .min(6, 'Needs at least 6 digits'),
+});
 function SignIn() {
   function handleSubmit(data) {
     console.tron.log(data);
@@ -21,7 +32,7 @@ function SignIn() {
           <FiLogIn size={20} color="#FFF" />
         </Link>
       </Info>
-      <Form onSubmit={handleSubmit}>
+      <Form schema={schema} onSubmit={handleSubmit}>
         <Input type="email" name="email" placeholder="E-mail" />
         <Input type="password" name="password" placeholder="Password" />
         <button type="submit">Sign in</button>
