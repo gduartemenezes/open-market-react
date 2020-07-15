@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
 
 import { FiLogIn } from 'react-icons/fi';
 import { Form, Input } from '@rocketseat/unform';
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
+import { signInRequest } from '~/store/modules/auth/actions';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -17,8 +19,9 @@ const schema = Yup.object().shape({
     .min(6, 'Needs at least 6 digits'),
 });
 function SignIn() {
-  function handleSubmit(data) {
-    console.tron.log(data);
+  const dispatch = useDispatch();
+  function handleSubmit({ email, password }) {
+    dispatch(signInRequest(email, password));
   }
 
   return (
