@@ -6,6 +6,10 @@ import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
 function SignUp() {
+  function handleSubmit(data) {
+    console.log(data);
+  }
+
   return (
     <Container>
       <Info>
@@ -17,11 +21,11 @@ function SignUp() {
           <span>Back to login</span>
         </Link>
       </Info>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Input type="text" name="name" placeholder="Name" />
         <Input type="email" name="email" placeholder="E-mail" />
         <Input type="password" name="password" placeholder="Password" />
-        <button type="button">Sign up</button>
+        <button type="submit">Sign up</button>
       </Form>
     </Container>
   );

@@ -6,6 +6,11 @@ import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
 function SignIn() {
+
+  function handleSubmit(data) {
+    console.log(data);
+  }
+
   return (
     <Container>
       <Info>
@@ -17,10 +22,10 @@ function SignIn() {
           <FiLogIn size={20} color="#FFF" />
         </Link>
       </Info>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Input type="email" name="email" placeholder="E-mail" />
         <Input type="password" name="password" placeholder="Password" />
-        <button type="button">Sign in</button>
+        <button type="submit">Sign in</button>
       </Form>
     </Container>
   );

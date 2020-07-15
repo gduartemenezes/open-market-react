@@ -6,6 +6,10 @@ import logo from '~/assets/img/facebook_1.png';
 import { Container, Info } from './styles';
 
 function AddProduct() {
+  function handleSubmit(data) {
+    console.log(data);
+  }
+
   return (
     <Container>
       <Info>
@@ -17,11 +21,11 @@ function AddProduct() {
           <span>Back to profile</span>
         </Link>
       </Info>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Input type="text" name="name" placeholder="Name" />
         <Input type="text" name="value" placeholder="Value" />
         <Input type="text" name="quantity" placeholder="Quantity" />
-        <button type="button">Add Product</button>
+        <button type="submit">Add Product</button>
       </Form>
     </Container>
   );
