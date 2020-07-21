@@ -18,3 +18,13 @@ export default function RouteWrapper({
 
   return <Route {...rest} render={(props) => <Component {...props} />} />;
 }
+
+RouteWrapper.propTypes = {
+  isPrivate: PropTypes.bool,
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+    .isRequired,
+};
+
+RouteWrapper.defaultProps = {
+  isPrivate: false,
+};
